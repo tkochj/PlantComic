@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>植物相声周记 · 第二期 · 法桐（漫画版）</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: #f0ebe3;
+    padding: 20px;
+  }
+  
+  .container { max-width: 900px; margin: 0 auto; }
+  
+  .header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #2d5a27, #4a7c3f);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before { content: "🌿"; position: absolute; font-size: 120px; right: -10px; bottom: -20px; opacity: 0.15; }
+  .header h1 { font-size: 28px; margin-bottom: 5px; }
+  .header .sub { font-size: 16px; opacity: 0.85; }
+  .header .ep { font-size: 14px; opacity: 0.7; margin-top: 10px; }
+  
+  .comic-panel {
+    background: white;
+    border: 3px solid #333;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+  }
+  
+  .panel-header {
+    background: #333;
+    color: white;
+    padding: 6px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .panel-header .icon { font-size: 18px; }
+  
+  .comic-img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px dashed #ddd;
+  }
+  
+  .dialogue-area { padding: 20px; }
+  
+  .bubble-wrap { display: flex; margin: 12px 0; gap: 12px; align-items: flex-start; }
+  .bubble-wrap.left { flex-direction: row; }
+  .bubble-wrap.right { flex-direction: row-reverse; }
+  
+  .avatar {
+    width: 50px; height: 50px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; flex-shrink: 0;
+    border: 3px solid #333;
+  }
+  .avatar.yimu { background: #e3f2fd; }
+  .avatar.shan { background: #fff3e0; }
+  
+  .bubble {
+    position: relative;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 85%;
+    word-break: break-word;
+  }
+  .bubble-wrap.left .bubble {
+    background: #e3f2fd; border: 2px solid #90caf9;
+    border-top-left-radius: 4px;
+  }
+  .bubble-wrap.right .bubble {
+    background: #fff3e0; border: 2px solid #ffcc80;
+    border-top-right-radius: 4px;
+  }
+  
+  .name-tag { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+  .name-tag .yimu-c { color: #1565c0; }
+  .name-tag .shan-c { color: #e65100; }
+  
+  .sfx {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: #c62828;
+    margin: 10px 0;
+    letter-spacing: 5px;
+  }
+  
+  .knowledge-card {
+    background: linear-gradient(135deg, #fafafa, #f5f5f5);
+    border: 2px dashed #4a7c3f;
+    border-radius: 15px;
+    padding: 18px;
+    margin: 15px 0;
+  }
+  .knowledge-card .title { font-weight: 900; color: #2d5a27; font-size: 16px; margin-bottom: 10px; }
+  .knowledge-card p { font-size: 14px; line-height: 1.6; margin: 5px 0; }
+  
+  table {
+    width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;
+  }
+  th, td {
+    border: 2px solid #333; padding: 10px; text-align: center;
+  }
+  th { background: #2d5a27; color: white; }
+  td { background: white; }
+  .highlight { background: #fff8e1; font-weight: 700; }
+  
+  .scene-text { font-style: italic; color: #888; font-size: 14px; text-align: center; margin: 10px 0; }
+  
+  .footer {
+    text-align: center; padding: 30px; color: #888; font-size: 14px;
+  }
+  
+  @media (max-width: 600px) {
+    .bubble { max-width: 75%; font-size: 14px; }
+    .header h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🌳 法桐：满大街都是</h1>
+    <h1>但你叫对它的名字了吗？</h1>
+    <div class="sub">🎭 植物相声周记 · 第二期</div>
+    <div class="ep">一木（林学长） 🎤 山果（好奇宝宝·吃货担当）</div>
+  </div>
+
+  <!-- Panel 1: 开场 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">📺</span> 开场 · 山果戴头盔上场</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/f65703a9e45d45ce9cb7803f74cfd57d.png" alt="开场场景" loading="lazy">
+    <div class="dialogue-area">
+      <div class="scene-text">山果戴着摩托车头盔上场</div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          你这是干嘛？新造型？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          我看了预告，这期说法桐！法桐春天炸毛，满天飞絮！我提前防护。
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          那我问你，你知道法桐到底叫什么吗？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          法国梧桐啊！
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          <strong>错仨。</strong>
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          三个？！哪三个？！
+        </div>
+      </div>
+      
+      <div class="sfx">💥 三连击！</div>
+    </div>
+  </div>
+
+  <!-- Panel 2: 误会一 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">❌</span> 误会一：它不是梧桐</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/e4b29fe6f3ec4bc495dbaf5e63bc345f.png" alt="误会一" loading="lazy">
+    <div class="dialogue-area">
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          第一，法桐根本不是梧桐。<br><br>
+          真梧桐 <strong>Firmiana simplex</strong>，锦葵科梧桐属，原产中国——凤凰栖息的梧桐是它。<br><br>
+          而法桐是<strong>悬铃木科悬铃木属</strong>，八竿子打不着。它就赢在叶子宽大像梧桐，蹭了个名儿。
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          好家伙——<strong>梧桐届的冒牌顶替</strong>！
+        </div>
+      </div>
+      
+      <div class="knowledge-card">
+        <div class="title">📚 知识卡</div>
+        <p><strong>真梧桐</strong> = Firmiana simplex（锦葵科梧桐属）→ 凤凰栖息的树 🐦</p>
+        <p><strong>法桐</strong> = 悬铃木属（悬铃木科）→ 只是叶子像梧桐 👻</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 3: 误会二 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">❌</span> 误会二：它不是法国来的</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/6778c5c216f34d509d2b39b57ce63916.png" alt="悬铃木三兄弟" loading="lazy">
+    <div class="dialogue-area">
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          悬铃木全世界就一个属三个种：<br>
+          🏀 <strong>一球悬铃木</strong> → 美桐（原产北美）<br>
+          🏀🏀🏀 <strong>三球悬铃木</strong> → 法桐（原产欧洲和中亚）<br><br>
+          那二球呢？是美桐和法桐在英国杂交出来的——<strong>英桐</strong>。<br>
+          London Plane，伦敦梧桐。
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          等等我捋一下：美桐和法桐生了英桐……<br>
+          那它跟我们街上的法桐有啥关系？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          <strong>它就是街上那棵树！</strong>我们满大街看到的所谓"法桐"，其实就是英桐。
+        </div>
+      </div>
+      
+      <div class="sfx">🤯 核 心 冲 击</div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          ❓❓❓ 街上种的是英桐，我们管它叫法国梧桐？<br><br>
+          一棵树，生在英国，种在法国租界，满大街都是——<br>
+          结果没有一个人叫对它的名字。
+        </div>
+      </div>
+      
+      <div class="knowledge-card">
+        <div class="title">📚 为什么叫法国梧桐？</div>
+        <p>清末从<strong>上海法租界</strong>引进，法国人种的，叶子像梧桐 → 老百姓随口就叫"法国梧桐"了。至于它到底叫啥学名？没人在乎 😅</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 4: 误会三 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">❌</span> 误会三：它也不是法桐</div>
+    <div class="dialogue-area">
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          植物学上真正的<strong>法桐</strong>，是它爹——三球悬铃木。<br>
+          我们街上的是儿子——<strong>二球悬铃木（英桐）</strong>。
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          意思是我指着满大街的树喊法桐，喊了二十多年，喊错了？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          对。真正的法桐（三球）在中国极少见，你平时根本碰不到。<br><br>
+          但大家都这么叫，语言嘛，约定俗成～<br>
+          要是写论文做科普，就得说清楚：<br>
+          <strong>街上的"法桐" = 二球悬铃木 = 英桐</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 5: 行道树之王 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">👑</span> 行道树之王</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/799767317a07490d98fdd57a005ae66b.png" alt="行道树之王" loading="lazy">
+    <div class="dialogue-area">
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          行，二球悬铃木就二球悬铃木——它凭啥当<strong>行道树之王</strong>？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          ✅ 长得快 → 二三十年蹿到一二十米<br>
+          ✅ 树冠大 → 夏天不用打伞<br>
+          ✅ 耐修剪 → 随便剪都能活<br>
+          ✅ 抗污染 → 雾霾天帮你吸脏东西<br><br>
+          而且树皮大片脱落，露出浅绿新皮，跟穿了迷彩服似的。
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          树界时尚icon啊！🎯
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 6: 毛絮 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">🤧</span> 毛絮——爱恨情仇</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/aa16ef7f2604444b8841aeabe68d4491.png" alt="毛絮生化武器" loading="lazy">
+    <div class="dialogue-area">
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          但它的毛也是真烦啊！每年春天那飞絮……
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          一年飞两波：<br>
+          🌸 第一波：春天新叶背面绒毛脱落<br>
+          💥 第二波：去年果球炸开<br><br>
+          每个果球 <strong>600~1400</strong> 个小坚果，个个带毛。<br>
+          一棵树挂几百个果球……
+        </div>
+      </div>
+      
+      <div class="sfx">💨 生 化 武 器 ！</div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          南京甚至开发了<strong>法桐果毛飘絮预报系统</strong>，每天告诉你哪条街炸毛最严重。
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          天气预报——今天晴，微风，<strong>炸毛指数五颗星</strong>，建议戴头盔！🪖
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          你还别说，你真戴了 😂
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 7: 南京传说 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">💕</span> 南京的传说</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/b307e9f1607940c6950d19e82f275abc.png" alt="南京传说" loading="lazy">
+    <div class="dialogue-area">
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          不过它在南京有个浪漫故事。<br>
+          传说蒋介石为了宋美龄引进的。<br>
+          美龄宫周围的梧桐项链，空中看像一颗宝石项链 💎
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          哇……美丽的代价就是吃毛 😭
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 8: 三兄弟区分 -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">🔍</span> 如何区分悬铃木三兄弟</div>
+    <img class="comic-img" src="https://platform-outputs.agnes-ai.space/images/text-to-image/2026/06/f0ad9ceeb21448b0a223d8a1ab0cf1df.png" alt="三兄弟区分图" loading="lazy">
+    <div class="dialogue-area">
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          看果球！<br><br>
+          🏀 <strong>一球悬铃木</strong>（美桐）→ 果球单个挂<br>
+          🏀🏀 <strong>二球悬铃木</strong>（英桐）→ 果球两个一对 ← <strong>街上最常见！</strong><br>
+          🏀🏀🏀 <strong>三球悬铃木</strong>（真法桐）→ 果球三个一串
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          考试选C——闭眼猜二球？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          没错！😎
+        </div>
+      </div>
+      
+      <table>
+        <tr><th></th><th>学名</th><th>俗名</th><th>果球特点</th></tr>
+        <tr><td>🏀</td><td>Platanus occidentalis</td><td>美桐</td><td>单个悬挂</td></tr>
+        <tr class="highlight"><td>🏀🏀</td><td>Platanus × acerifolia</td><td><strong>英桐 ★</strong></td><td><strong>两个一对 ← 街上全是你叫的"法桐"</strong></td></tr>
+        <tr><td>🏀🏀🏀</td><td>Platanus orientalis</td><td>法桐（真）</td><td>三个一串</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Finale -->
+  <div class="comic-panel">
+    <div class="panel-header"><span class="icon">🎬</span> 收尾</div>
+    <div class="dialogue-area">
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          <strong>总结——</strong><br><br>
+          大家叫的法桐，大名<strong>二球悬铃木</strong>，混血儿英桐。<br><br>
+          ❌ 不梧桐<br>
+          ❌ 不法国<br>
+          ❌ 不三球<br><br>
+          🌸 春天美，🌿 夏天凉，🍂 秋天黄<br>
+          💨 春天炸毛让人想逃
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          下期还戴不戴？
+        </div>
+      </div>
+      
+      <div class="bubble-wrap left">
+        <div class="avatar yimu">🌲</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="yimu-c">一木</span></div>
+          下期预告——<strong>仙人掌 🌵</strong>
+        </div>
+      </div>
+      
+      <div class="bubble-wrap right">
+        <div class="avatar shan">🍠</div>
+        <div class="bubble">
+          <div class="name-tag"><span class="shan-c">山果</span></div>
+          行，这个确实需要 🪖
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    🌿 植物相声周记 · 第二期 · 完 🌿<br>
+    <span style="font-size:12px;">📌 下期预告：仙人掌——你以为它只是盆栽？它在沙漠里是水塔、围墙和急救包。</span>
+  </div>
+
+</div>
+</body>
+</html>
